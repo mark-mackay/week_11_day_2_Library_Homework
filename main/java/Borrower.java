@@ -8,5 +8,4 @@ public class Borrower {
         this.name = name;
         this.books = new ArrayList<>();
     }
-
 }
