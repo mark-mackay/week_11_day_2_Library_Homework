@@ -13,5 +13,13 @@ public class Borrower {
             books.add(library.getBookByName(name));
         }
     }
+    public boolean hasBook(String name){
+        for (Book book : this.books) {
+            if (book.getName() == name) {
+                return true;
+            }
+        }
+        return false;
+    }
 
 }
