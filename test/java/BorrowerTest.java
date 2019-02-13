@@ -40,5 +40,6 @@ public class BorrowerTest {
     public void canBorrowBook(){
         borrower.getBook(library, "The Rats");
         assertEquals(true, borrower.hasBook("The Rats"));
+        assertEquals(false, library.hasBook("The Rats"));
     }
 }
