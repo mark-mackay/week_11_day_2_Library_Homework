@@ -1,14 +1,17 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Library {
     private String name;
     private int capacity;
     private ArrayList<Book> books;
+    private HashMap<String, Integer> booksByGenre;
 
     public Library(String name, int capacity){
         this.name = name;
         this.capacity = capacity;
         this.books = new ArrayList<>();
+        this.booksByGenre = new HashMap<>();
     }
     public String getName(){
         return this.name;
@@ -44,5 +47,12 @@ public class Library {
                 }
             }
             return booky;
+    }
+    public int getBooksByGenre(String genre){
+        for (Book book : this.books) {
+            
+            this.booksByGenre.put(book.getGenre(), 1);
+        }
+        return this.booksByGenre(genre);
     }
 }

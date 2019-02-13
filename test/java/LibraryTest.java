@@ -71,13 +71,11 @@ public class LibraryTest {
     public void testHasBook_false() {
         assertEquals(false, library.hasBook("Boing"));
     }
-//    @Test
-//    public void canRemovePassengerFromBus(){
-//        bus.addPassenger();
-//        assertEquals(1, bus.passengerCount());
-//        bus.removePassenger();
-//        assertEquals(0, bus.passengerCount());
-//    }
+    @Test
+    public void testNumberOfBooksByGenre(){
+        assertEquals(2,library.getBooksByGenre("Horror"));
+        assertEquals(1,library.getBooksByGenre("Drama"));
+    }
 //
 //    @Test
 //    public void canAddPassengersFromQueue(){
