@@ -13,6 +13,8 @@ public class Library {
         this.books = new ArrayList<>();
         this.booksByGenre = new HashMap<>();
     }
+
+
     public String getName(){
         return this.name;
     }
@@ -48,11 +50,24 @@ public class Library {
             }
             return booky;
     }
-    public int getBooksByGenre(String genre){
-        for (Book book : this.books) {
+
+    public void getStock(){
+        for (Book book: this.books){
+            String genreForBook = book.getGenre();
             
-            this.booksByGenre.put(book.getGenre(), 1);
+            if (this.booksByGenre.containsKey(genreForBook)) {
+                this.booksByGenre.put(genreForBook, this.booksByGenre.get(genreForBook) + 1);
+            }
+            else {
+                this.booksByGenre.put(book.getGenre(), 1);
+            }
         }
-        return this.booksByGenre(genre);
     }
+//    public int getBooksByGenre(String genre){
+//        for (Book book : this.books) {
+//
+//            this.booksByGenre.put(book.getGenre(), 1);
+//        }
+//        return this.booksByGenre(genre);
+//    }
 }
