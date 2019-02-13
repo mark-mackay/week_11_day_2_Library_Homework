@@ -8,4 +8,10 @@ public class Borrower {
         this.name = name;
         this.books = new ArrayList<>();
     }
+    public void getBook(Library library, String name){
+        if (library.hasBook(name)) {
+            books.add(library.getBookByName(name));
+        }
+    }
+
 }

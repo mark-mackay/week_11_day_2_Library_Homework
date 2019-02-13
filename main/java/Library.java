@@ -34,16 +34,15 @@ public class Library {
         }
         return false;
     }
-//    public Book borrowBookByName(String name){
-//        // Will return book by name or first book in list
-//        if (hasBook(name)){
-//            for (Book book : this.books){
-//                if (book.getName() == name) {
-//                    return this.books.remove(new Book(book));
-//                }
-//            }
-//        }
-//        return this.books(0);
-//    }
-
+    public Book getBookByName(String name){
+     // Will return book by name or first book in list
+        Book booky = new Book("H", "H","Horror");
+            for (Book book : this.books){
+                if (book.getName() == name) {
+                    booky = book;
+                    this.books.remove(book);
+                }
+            }
+            return booky;
+    }
 }
